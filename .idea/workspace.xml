@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="115b6910-7f57-45bd-84ea-b09577a9804a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YSMfjdjSOPUL8DWKygEUcqrUwY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.buildTools.grunt.grunt-cli.package" value="" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/polls" />
+    <property name="nodejs.jest.jest_package" value="" />
+    <property name="nodejs.protractor.protractor_package" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="imdb_task" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="imdb_task" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/migrations" />
+      <recent name="$PROJECT_DIR$/api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/polls" />
+      <recent name="$PROJECT_DIR$/api" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <module name="imdb_task" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.grunt">
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="115b6910-7f57-45bd-84ea-b09577a9804a" name="Default Changelist" comment="" />
+      <created>1582932142865</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582932142865</updated>
+      <workItem from="1582932144454" duration="672000" />
+      <workItem from="1582960971061" duration="24016000" />
+      <workItem from="1583048061319" duration="116000" />
+      <workItem from="1583049108134" duration="14176000" />
+      <workItem from="1583067367491" duration="4132000" />
+      <workItem from="1583089066376" duration="599000" />
+      <workItem from="1583173675642" duration="2894000" />
+      <workItem from="1583258558520" duration="10761000" />
+      <workItem from="1583346851882" duration="10030000" />
+      <workItem from="1583432141670" duration="10826000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="127" y="24" width="1110" height="720" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582963120278">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state x="127" y="24" width="1110" height="720" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.1366.720@0.24.1366.720" timestamp="1582963120278" />
+    <state x="368" y="188" width="620" height="402" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583439834401">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state x="368" y="188" width="620" height="402" key="#com.intellij.fileTypes.FileTypeChooser/0.24.1366.720@0.24.1366.720" timestamp="1583439834401" />
+    <state x="491" y="102" width="374" height="574" key="#com.intellij.ide.util.MemberChooser" timestamp="1583263307722">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state x="491" y="102" width="374" height="574" key="#com.intellij.ide.util.MemberChooser/0.24.1366.720@0.24.1366.720" timestamp="1583263307722" />
+    <state x="419" y="238" width="518" height="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583441648694">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state x="419" y="238" width="518" height="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.24.1366.720@0.24.1366.720" timestamp="1583441648694" />
+    <state x="100" y="122" width="1166" height="522" key="DiffContextDialog" timestamp="1583351604452">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state x="100" y="122" width="1166" height="522" key="DiffContextDialog/0.24.1366.720@0.24.1366.720" timestamp="1583351604452" />
+    <state x="420" y="113" width="515" height="554" key="EnvironmentVariablesDialog" timestamp="1582932344633">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state x="420" y="113" width="515" height="554" key="EnvironmentVariablesDialog/0.24.1366.720@0.24.1366.720" timestamp="1582932344633" />
+    <state x="466" y="142" width="424" height="496" key="FileChooserDialogImpl" timestamp="1582932707513">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state x="466" y="142" width="424" height="496" key="FileChooserDialogImpl/0.24.1366.720@0.24.1366.720" timestamp="1582932707513" />
+    <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1582963129216">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state width="263" height="500" key="HiddenNamespacesPopup/0.24.1366.720@0.24.1366.720" timestamp="1582963129216" />
+    <state x="172" y="24" key="SettingsEditor" timestamp="1582980962841">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state x="172" y="24" key="SettingsEditor/0.24.1366.720@0.24.1366.720" timestamp="1582980962841" />
+    <state x="245" y="134" width="900" height="578" key="find.popup" timestamp="1583350835169">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state x="245" y="134" width="900" height="578" key="find.popup/0.24.1366.720@0.24.1366.720" timestamp="1583350835169" />
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup" timestamp="1583265455279">
+      <screen x="0" y="24" width="1366" height="720" />
+    </state>
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.24.1366.720@0.24.1366.720" timestamp="1583265455279" />
+  </component>
+</project>

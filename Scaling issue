@@ -1,0 +1,25 @@
+To scale the API to handle apprx 15M users, there are few steps we should consider
+
+1. Add a load balancer in front of the web servers, the user request will be transferred to multiple
+   web servers instead of just one.
+2. Separate the web host tier from the database tier, and move the database tier to a database efficient
+   server, eg RDS.
+3. Separate the database to multiple read replicas and a write master.
+4. Separate database to offload the session storage from the web server
+5. Use in-memory cache to offload read requests from the database
+6. Move to NoSql database
+7. Opt for Auto scaling web service.
+
+Bottlenecks,
+
+There might be a little delay in the getting rid of the stale data when ever new data is updated to the
+system, but as per CAP theorem since we are building available and partition tolerant system, consistency will
+be hampered a bit.
+
+To write huge data to the application will cause write master to take up
+more memory and eventually slow down execution, we can use queues when ever we upload
+data on the application.
+
+Consider different search approaches, since a search query on the database can be a majorly
+resource consuming. We can turn to search engine like solr, to cut down the search time.
+

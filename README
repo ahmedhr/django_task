@@ -1,0 +1,228 @@
+APIs created using Django.
+Database - SQLITE
+
+Models:
+    1. Movie:
+            Fields:
+                   a. 'name' - Name of the movie(character field)
+                   b. 'director' - Name of the director(character field)
+                   c. 'imdb_score' - Imdb score of the movie(Decimal field - 2 decimal places)
+                   d. 'popularity' - Popularity of the movie(Decimal field - 1 decimal place)
+                   e. 'genres' - Different genres of the movie(Many-to-many fields)
+    2. Genres:
+            Fields:
+                   a. 'name' - Name of the genre(character field)
+
+Views:
+    MovieViewSet:
+                - ModelViewSet that uses Generic API view and different mixins to provide default CRUD operations
+                - To serialize the data we have used Movie Serializer.
+                - To filter data to be used in search, we have overridden SearchFilter to provide default and dynamic
+                  fields
+                - We have overridden the default get_permission to allow only authenticated users to perform GET
+                  method on the API
+                - And allow only Admin users to execute POST, PUT and PATCH methods, to create or update the movie data
+
+Serializer:
+    MovieSerializer:
+                - The Movie serializer that returns the movie data and also adds the genre data with all its fields.
+                - Implemented custom create function since we have many-to-many relation in our data set
+                - New moive is created whilst checking if the genre already exists.
+                - Implemented custom update where the id of the genre that is passed in the API is loaded and available
+                  here as instance.
+                - We update the instance on the with the data provided in the body.
+                - Same is used to make partial updates(PATCH)
+
+Access level:
+            There are 2 levels of access:
+                1. Authenticated user - Has access only to movies list
+                2. Admin user - Has access to movies list, and can perform CRUD operations
+                                on movies database
+
+USERS:
+      Admin user:
+            username: admin
+            password: admin
+      Authenticated user:
+            username: alex
+            password: imdb1234
+
+API:
+    LOGIN: To get the auth token for successive requests.
+           REQUEST:
+                    URL - POST https://ahmedimdbapp.herokuapp.com/api/auth/token/login
+                    Header - 'Content-Type: application/json'
+                    body - {
+                             "username": "alex",
+	                         "password": "imdb1234"
+                            }
+           RESPONSE:
+                    {
+                       "auth_token": "a6e857632c4f751b9e65db5920ec1bb8db3ddc47"
+                    }
+
+    MOVIE List: To get the list of all the movies. Default page limit for movies is 10.
+           REQUEST:
+                   URL - GET https://ahmedimdbapp.herokuapp.com/imdb/movies/
+                         GET https://ahmedimdbapp.herokuapp.com/imdb/movies/?page=2
+                   HEADER -  'Content-Type: application/json'
+                           -  'Authorization: Token a6e857632c4f751b9e65db5920ec1bb8db3ddc47'
+           RESPONSE:
+                   {
+                    "count": 248,
+                    "next": "http://127.0.0.1:8000/imdb/movies/?page=3",
+                    "previous": "http://127.0.0.1:8000/imdb/movies/",
+                    "results": [
+                        {
+                            "id": 11,
+                            "genres": [
+                                {
+                                    "id": 7,
+                                    "name": "Drama"
+                                },
+                                {
+                                    "id": 14,
+                                    "name": "Crime"
+                                }
+                            ],
+                            "name": "The Godfather",
+                            "director": "Francis Ford Coppola",
+                            "imdb_score": "9.2",
+                            "popularity": "92.0"
+                         },
+                                ]
+                    }
+
+    SEARCH Movies:
+           REQUEST:
+                   URL - GET https://ahmedimdbapp.herokuapp.com/imdb/movies?search=wiz
+                         GET https://ahmedimdbapp.herokuapp.com/imdb/movies?search=Victor&search_fields=director
+                   HEADER -  'Content-Type: application/json'
+                           -  'Authorization: Token a6e857632c4f751b9e65db5920ec1bb8db3ddc47'
+           RESPONSE:
+            {
+                "count": 2,
+                "next": null,
+                "previous": null,
+                "results": [
+                    {
+                        "id": 1,
+                        "genres": [
+                            {
+                                "id": 1,
+                                "name": "Adventure"
+                            },
+                            {
+                                "id": 2,
+                                "name": "Family"
+                            },
+                            {
+                                "id": 3,
+                                "name": "Fantasy"
+                            },
+                            {
+                                "id": 4,
+                                "name": "Musical"
+                            }
+                        ],
+                        "name": "The Wizard of Oz",
+                        "director": "Victor Fleming",
+                        "imdb_score": "8.3",
+                        "popularity": "83.0"
+                    },
+                    {
+                        "id": 37,
+                        "genres": [
+                            {
+                                "id": 1,
+                                "name": "Adventure"
+                            },
+                            {
+                                "id": 2,
+                                "name": "Family"
+                            },
+                            {
+                                "id": 3,
+                                "name": "Fantasy"
+                            },
+                            {
+                                "id": 18,
+                                "name": "Comedy"
+                            }
+                        ],
+                        "name": "The Wizard of Oz",
+                        "director": "Larry Semon",
+                        "imdb_score": "5.3",
+                        "popularity": "53.0"
+                    }
+                ]
+            }
+
+    CREATE Movie: Create movie, use admin token.
+           REQUEST:
+                   URL - POST https://ahmedimdbapp.herokuapp.com/imdb/movies/
+                   HEADER -  'Content-Type: application/json'
+                           -  'Authorization: Token 52223333b674f40303f2cbb46e5cdce4cd801092'
+                   BODY - {
+                            "genres": [
+                                {
+                                    "name": "Action"
+                                }
+                            ],
+                            "name": "Mars rover",
+                            "director": "J K",
+                            "imdb_score": "8.3",
+                            "popularity": "8.2"
+                          }
+           RESPONSE:
+                         {
+                            "id" : 250
+                            "genres": [
+                                {
+                                    "id" : 7
+                                    "name": "Action"
+                                }
+                            ],
+                            "name": "Mars rover",
+                            "director": "J K",
+                            "imdb_score": "8.3",
+                            "popularity": "8.2"
+                          }
+
+    Update Movie: Update movie(mention movie 'id' in the URL), use admin token.
+           REQUEST:
+                   URL - PUT https://ahmedimdbapp.herokuapp.com/imdb/movies/25
+                   HEADER -  'Content-Type: application/json'
+                           -  'Authorization: Token 52223333b674f40303f2cbb46e5cdce4cd801092'
+                   BODY - {
+                            "genres": [
+                                {
+                                    "name": "Action"
+                                }
+                            ],
+                            "name": "Mars rover 2",
+                            "director": "J K",
+                            "imdb_score": "8.7",
+                            "popularity": "84.2"
+                          }
+           RESPONSE:
+                         {
+                            "genres": [
+                                {
+                                    "name": "Action"
+                                }
+                            ],
+                            "name": "Mars 2",
+                            "director": "JK",
+                            "imdb_score": "8.3",
+                            "popularity": "8.2"
+                        }
+
+     Delete Movie: Delete movie(mention movie 'id' in the URL), user admin token
+           REQUEST:
+                   URL - Delete https://ahmedimdbapp.herokuapp.com/imdb/movies/25
+                   HEADER -  'Content-Type: application/json'
+                           -  'Authorization: Token 52223333b674f40303f2cbb46e5cdce4cd801092'
+           RESPONSE:
+
+
